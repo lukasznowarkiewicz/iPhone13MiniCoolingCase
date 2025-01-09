@@ -175,14 +175,14 @@ After finding the best heatsink design - designed 3d printable flexible case.
 
 ## Testing
 
-The evaluate the designed enclosure performed series of tests, simulating behaviour close to the problematic one.
+To evaluate the designed enclosure, a series of tests were performed, simulating behavior close to the problematic scenario.
 
 ## Charge up time
 For both tests used the same unit of iPhone 13 mini, battery health status reported by the OS is 85%, placed in the same position, charged from 0% with Apple 35W charger, constant ambient temperature (23 deg Celsius), maximum screen brightness set to 100% and screen recording on during duration of the experiment:
 -  with UAG Pathfinder case: 1:50
 - with custom cooling case: 3:37
 
-## Series of benchmark
+## Series of benchmarks
 
 First classification done in Geekbench:
 - CPU score with UAG Pathfinder case: 5007
