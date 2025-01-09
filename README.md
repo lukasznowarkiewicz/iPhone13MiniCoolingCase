@@ -3,16 +3,42 @@ This repository contains the mechanical design of the iPhone 13 Mini case with a
 
 ## Heatsink Development
 
+### Intro
+
+While using my iPhone 13 mini, I’ve experienced several situations where the phone overheated to the point of being unusable. The most demanding scenario is while driving, which can be especially frustrating. I typically use navigation in the foreground at maximum screen brightness, stream music in the background, keep the personal hotspot turned on, and often have a drained battery. When the phone becomes too hot, Google Maps starts to lag, the battery stops charging, or it may even discharge slowly.
+
+My worst experience occurred during a vacation in Malta, where temperatures were well over 35°C and the phone was in direct sunlight. I ended up with a completely dead battery and resorted to placing the phone in a grocery store’s fridge to cool it down enough so I could charge it and find my way back to the hotel.
+
+
 ### Overview
-The project explores various heatsink designs to enhance heat dissipation and optimize phone performance. Key considerations include:
+The general idea was to design a passively cooled iPhone case no thicker than my current one (a UAG Pathfinder). I used Fusion 360 for the design simulations. Since no specific information about the internal design of the iPhone 13 mini such as materials used or the TDP of heat-generating components is readily available online, I had to make certain assumptions.
 - **Thermal dissipation target**: 5W
-- **Model limitations**: The CPU is not the sole heating element.
+- **Model limitations**: The CPU is not the sole heating element - assume the whole PCB will distribute the heat equally from all components.
 - **Design diversity**: Aesthetic and performance-focused variations.
+
+### First Attempts of modelling iPhone
+
+With choosen materials - glass for front and back - the simulation gave unrealistic results. The first model of the phone was too simple.
+![Metal Sheets Under Glass](images/first_attempts_importance_of_metal_sheets_under_glass.png)
+
+
+### More detailed model of the iPhone
+
+Analyzed phone disassembly on iFixit site. Added to the model thin stainless steel sheets. With this change the simulations seems to be much more realistic. 
+![Added Metal Sheets](images/added_metal_sheets.png)
+![Thermal Model](images/iPhone_thermal_model.png)
+![Simplified Model](images/iphone12mini_simplified_model_for_simulation.png)
+Verified design with themal camera (at IDLE) and the thermal distirubtion looks similar. 
+![Thremals from thermal camera](images/iphone13miniRecordedThermals.jpg)
+
 
 ### Studies and Results
 
+Started iterating with the design to find design which will look nice, dissipate heat effectively and will be relatively easy to produce.
+
 #### Study 1: Bare iPhone Thermal Performance
 *Baseline performance without a heatsink. Used to establish a reference for subsequent tests.*
+![Study 1](images/study_1.png)
 
 #### Study 2: Simple 4mm Thick Heatsink (Circular Patterns)
 *Testing heat dissipation using simple circular elements of 4mm thickness.*
@@ -109,34 +135,41 @@ The project explores various heatsink designs to enhance heat dissipation and op
 
 ![Study 20](images/study_20.png)
 
-## Additional Resources
-### Design Renders
+## Casing design
+After finding the best heatsink design - designed 3d printable flexible case. 
 
-#### Aluminium Heatsink
-
-![Aluminium 1](images/iPhone_12_mini_heatsink_casing_aluminium_1.png)
 ![Aluminium 2](images/iPhone_12_mini_heatsink_casing_aluminium_2.png)
-![Aluminium 3](images/iPhone_12_mini_heatsink_casing_aluminium_3.png)
 ![Aluminium 4](images/iPhone_12_mini_heatsink_casing_aluminium_4.png)
 
-#### Copper Heatsink
 
-![Copper 1](images/iPhone_12_mini_heatsink_casing_copper_1.png)
-![Copper 2](images/iPhone_12_mini_heatsink_casing_copper_2.png)
-![Copper 3](images/iPhone_12_mini_heatsink_casing_copper_3.png)
-
-### Simulation Models
-
-![Thermal Model](images/iPhone_thermal_model.png)
-![Simplified Model](images/iphone12mini_simplified_model_for_simulation.png)
-
-### Analysis Results
+### Results of producibility analysis
 
 ![Accessibility Analysis](images/accessibility_analysis.png)
 ![Interference Analysis](images/interference_analysis.png)
 
-### First Attempts
 
-![Metal Sheets Under Glass](images/first_attempts_importance_of_metal_sheets_under_glass.png)
-![Added Metal Sheets](images/added_metal_sheets.png)
+### Manufacturing
+
+**Heatsink**
+- CNC file: aluminium_heatsink_rev14 v11.step
+- Material: Aluminum 6061
+- Surface Finish: Bead blasting + Anodizing-Black-Matte
+- Tightest Tolerance: ISO 2768 medium
+- Smallest Roughness	Ra3.2
+
+![Milled1](images/milledHeatsinkTop.jpeg)
+
+![Milled2](images/milledHeatsinkBottom.jpeg)
+
+**Flexible casing**
+- 3D file: iPhone13mini-heatsink-case.step
+- material: TPU
+
+![3D printing](images/3dTPUBase.jpeg)
+
+### Assembly
+
+
+
+### Testing
 
