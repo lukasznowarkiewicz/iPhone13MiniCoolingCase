@@ -167,11 +167,39 @@ After finding the best heatsink design - designed 3d printable flexible case.
 
 ![3D printing](images/3dTPUBase.jpeg)
 
-### Assembly
+## Assembly
 
 ![Assembled top](images/iphone13coolingCasetTop.png)
 
 ![Assembled bottom](images/iphone13coolingCaseBack.png)
 
-### Testing
+## Testing
 
+The evaluate the designed enclosure performed series of tests, simulating behaviour close to the problematic one.
+
+## Charge up time
+For both tests used the same unit of iPhone 13 mini, battery health status reported by the OS is 85%, placed in the same position, charged from 0% with Apple 35W charger, constant ambient temperature (23 deg Celsius), maximum screen brightness set to 100% and screen recording on during duration of the experiment:
+-  with UAG Pathfinder case: 1:50
+- with custom cooling case: 3:37
+
+## Series of benchmark
+
+First classification done in Geekbench:
+- CPU score with UAG Pathfinder case: 5007
+- CPU score with custom cooling case: 5240
+
+- GPU score with UAG Pathfinder case: 18343
+- GPU score with custom cooling case: 18633
+
+
+For more extensive tests used much longer lasting AntutBenchmark, run 3 times one after another, for both cases with 35W charger plugged in and starting from exactly 50% charge:
+- scores with UAG Pathfinder case: 946059, 955758, 926747
+- scores with custom cooling case: 854717, 851384, 888220 (battery reached 80% charge)
+
+
+Used also 3DMark aplication which generate GPU intensive load and return data in JSON format:
+![3dMark Results](images/3DMarkResults.png)
+
+## Conclusions
+
+Overall, I would consider the time spent on this casing well worth it. The improvement might not be clearly visible in benchmarks, but it’s definitely noticeable when holding the phone or switching to another application under load. It also helped eliminate the “Charging On Hold” notification. And, of course, I now own the most overengineered phone case among my colleagues!
