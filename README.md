@@ -169,7 +169,9 @@ After finding the best heatsink design - designed 3d printable flexible case.
 
 ### Assembly
 
+![Assembled top](images/iphone13coolingCasetTop.png)
 
+![Assembled bottom](images/iphone13coolingCaseBack.png)
 
 ### Testing
 
