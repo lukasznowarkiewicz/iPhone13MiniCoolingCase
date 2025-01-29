@@ -179,8 +179,8 @@ To evaluate the designed enclosure, a series of tests were performed, simulating
 
 ## Charge up time
 For both tests used the same unit of iPhone 13 mini, battery health status reported by the OS is 85%, placed in the same position, charged from 0% with Apple 35W charger, constant ambient temperature (23 deg Celsius), maximum screen brightness set to 100% and screen recording on during duration of the experiment:
--  with UAG Pathfinder case: 1:50
-- with custom cooling case: 3:37
+-  with UAG Pathfinder case: 3:37
+- with custom cooling case: 1:50
 
 ## Series of benchmarks
 
